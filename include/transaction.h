@@ -20,7 +20,7 @@ struct Transaction {
 };
 
 // Function to create a transaction
-struct Transaction* createTransaction(char* sender, char* receiver, int amount, int fee, time_t timestamp, int id, int signature);
+struct Transaction* createTransaction(char* sender, char* receiver, int amount, int fee, int id, int signature);
 
 // Function to free memory allocated for a transaction
 void freeTransaction(struct Transaction* transaction);

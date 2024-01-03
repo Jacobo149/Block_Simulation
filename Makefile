@@ -10,10 +10,10 @@ SRCS = $(wildcard $(SRC_DIR)/*.c)
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJ_DIR)/%.o, $(SRCS))
 
 # Define the targets
-all: $(BIN_DIR)/block
+all: $(BIN_DIR)/main
 
-$(BIN_DIR)/block: $(OBJS) | $(BIN_DIR)
-	$(CC) -o $@ $^ -lm
+$(BIN_DIR)/main: $(OBJS) | $(BIN_DIR)
+	$(CC) -o $@ $(OBJS) -lm
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -22,4 +22,4 @@ $(OBJ_DIR) $(BIN_DIR):
 	mkdir -p $@
 
 clean:
-	rm -f $(BIN_DIR)/block $(OBJS)
+	rm -f $(BIN_DIR)/main $(OBJS)

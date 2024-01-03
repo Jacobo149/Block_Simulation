@@ -35,34 +35,14 @@ void freeTransaction(struct Transaction* transaction) {
 }
 
 // Function to display a transaction
-/*
-int main() {
-    // Example usage of createTransaction
-    char* sender = "Alice";
-    char* receiver = "Bob";
-    int amount = 100;
-    int fee = 5;
-    time_t timestamp = time(NULL);  // Use the current time
-    int id = 1;
-    int signature = 123456;
-
-    struct Transaction* myTransaction = createTransaction(sender, receiver, amount, fee, timestamp, id, signature);
-
-    // Display information about the created transaction
+void displayTransaction(struct Transaction* transaction){
     printf("Transaction Details:\n");
-    printf("Sender: %s\n", myTransaction->sender);
-    printf("Receiver: %s\n", myTransaction->receiver);
-    printf("Amount: %d\n", myTransaction->amount);
-    printf("Fee: %d\n", myTransaction->fee);
-    printf("Timestamp: %ld\n", myTransaction->timestamp);
-    printf("ID: %d\n", myTransaction->id);
-    printf("Signature: %d\n", myTransaction->signature);
+    printf("Sender: %s\n", transaction->sender);
+    printf("Receiver: %s\n", transaction->receiver);
+    printf("Amount: %d\n", transaction->amount);
+    printf("Fee: %d\n", transaction->fee);
+    printf("Timestamp: %ld\n", transaction->timestamp);
+    printf("ID: %d\n", transaction->id);
+    printf("Signature: %d\n", transaction->signature);
 
-    // Free allocated memory
-    free(myTransaction->sender);
-    free(myTransaction->receiver);
-    free(myTransaction);
-
-    return 0;
 }
-*/

@@ -66,26 +66,12 @@ void freeBlock(struct Block* block) {
 }
 
 // Function to display a block
-int main() {
-    // Example usage of createBlock
-    uint32_t number = 1;
-    uint32_t nonce = 12345;
-    struct Transaction* transactions = NULL;
-    uint32_t numTransactions = 0;
-    char* previousHash = "0";
+void displayBlock(struct Block* block) {
 
-    struct Block* myBlock = createBlock(number, nonce, transactions, numTransactions, previousHash);
-
-    // Display information about the created block
-    printf("Block Details:\n");
-    printf("Number: %d\n", myBlock->number);
-    printf("Nonce: %d\n", myBlock->nonce);
-    printf("Timestamp: %ld\n", myBlock->timestamp);
-    printf("Previous Hash: %s\n", myBlock->previousHash);
-    printf("Hash: %s\n", myBlock->hash);
-
-    // Free memory
-    freeBlock(myBlock);
-
-    return 0;
+    printf("Block #%d\n", block->number);
+    printf("Hash: %s\n", block->hash);
+    printf("Nonce: %d\n", block->nonce);
+    printf("Timestamp: %s", ctime(&block->timestamp));
+    printf("Previous hash: %s\n", block->previousHash);
+    printf("Transactions:\n");
 }
