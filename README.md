@@ -1,13 +1,31 @@
 # Block_Simulation
 
 Learning tool with a command line interface.  
+Simulates Blockchain Block creation, walking users through the steps along the way.
 
 
 ## How to Run
-- Download Repository
+
+### Prerequisites
+- Download a C compiler
+- Clone Repository
+- Navigate to Repository
+
+### Console Commands
+Compile Project
+```
+make
+```
+Navigate to bin directory
+```
+cd bin
+```
+Run executable
+```
+.\main
+```
 
 ### Current Todo:  
-Make random workload generator, tracks id, nonce, etc. (Search how these work)
-Ask whether they would want to add their own transactions or generate one randomly
-Allow user to create multiple blocks, can track previous hash
-Make Proper ReadMe
+Make a random workload generator
+Option to add transaction manually
+Multiple Blocks, previous hash
