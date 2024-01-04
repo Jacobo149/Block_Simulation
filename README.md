@@ -26,6 +26,6 @@ Run executable
 ```
 
 ### Current Todo:  
-Make a random workload generator
-Option to add transaction manually
+Make a random workload generator  
+Option to add transaction manually  
 Multiple Blocks, previous hash
