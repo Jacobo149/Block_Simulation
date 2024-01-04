@@ -1,7 +1,10 @@
 # Block_Simulation
 
-Goal is a learning tool with a command line interface.  
-Can make project more and more like the real thing with more features added over time.  
+Learning tool with a command line interface.  
+
+
+## How to Run
+- Download Repository
 
 ### Current Todo:  
 Make random workload generator, tracks id, nonce, etc. (Search how these work)
